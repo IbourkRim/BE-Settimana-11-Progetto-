@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>dati corso</title>
+</head>
+<body>
+	<h1><i><u><center><font color="9900CC">Benvenuto! inserisci i dati del corso:</font></center></u></i></h1>
+	<form action="#" method="post" th:action="@{/corso/inserisci}" th:object="${corsoLaurea}">
+		<div>
+			Codice corso:<input type="text" th:field="*{codiceCorso}" id="codicecorso" required="required">
+		</div>
+
+		<div>
+			Nome corso:<input type="text" th:field="*{nome}" id="nome" required="required">
+		</div>
+		
+		<div>
+			Indirizzo:<input type="text" th:field="*{indirizzo}" id="indirizzo" required="required">
+		</div>
+		
+		<div>
+			Numero d'esami:<input type="text" th:field="*{numeroEsami}" id="numeroEsami" required="required">
+		</div>
+		<br>
+		<br>
+		<input type="submit" value="Conferma">
+		<br>
+		<br>
+		 <input type="reset" value="Reset"/>
+	</form>
+</body>
+</html>

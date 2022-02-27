@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>lista studenti</title>
+</head>
+<body>
+<center>
+<h1><i><u><font color="FF0099">Lista studenti universitari:</font></u></i></h1>
+	<table>
+	<div th:each="s: ${listaStudenti}">
+		<tr>
+			<td th:text="${s.matricola}"></td>
+			<td th:text="${s.nome}"></td>
+			<td th:text="${s.cognome}"></td>
+			<td th:text="${s.dataNascita}"></td>
+			<td th:text="${s.email}"></td>
+			<td th:text="${s.indirizzo}"></td>
+			<td th:text="${s.citta}"></td>
+			<td th:text="${s.corsoLaurea}"></td>
+			
+			
+
+		</tr>
+	</div>
+	
+	
+	</table>
+
+	<table>
+		<tr>
+            <td><a href="http://localhost:8080/studente/mostraformaggiungi">Aggiungi Studente</a></td>
+        </tr>
+	</table>
+
+	<table>
+		<tr>
+            <td><a href="http://localhost:8080/segreteria">Torna alla home</a></td>
+        </tr>
+	</table>
+</center>
+</body>
+</html>

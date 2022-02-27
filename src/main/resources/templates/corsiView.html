@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>lista corsi</title>
+</head>
+<body>
+	<center>
+	<h1><i><u><font color="FF0099">Lista corsi universitari:</font></u></i></h1>
+	<hr>
+	<table>
+		<div th:each="c: ${listaCorsi}">
+			<tr>
+				<td th:text="${c.codiceCorso}"></td>
+				<td th:text="${c.nome}"></td>
+				<td th:text="${c.indirizzo}"></td>
+				<td th:text="${c.numeroEsami}"></td>
+			</tr>
+		</div>
+
+	</table>
+
+	
+	<table>
+		<tr>
+            <td><a href="http://localhost:8080/corso/mostraformaggiungi">Aggiungi Corso</a></td>
+        </tr>
+	</table>
+
+	<table>
+		<tr>
+            <td><a href="http://localhost:8080/segreteria">Torna alla home</a></td>
+        </tr>
+	</table>
+
+</center>
+</body>
+</html>
